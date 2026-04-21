@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rive Study – April Vibes Carrusel -</title>
+
+    <script src="https://unpkg.com/@rive-app/webgl2@latest"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #161616;
+        overflow: hidden;
+      }
+
+      .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      canvas {
+        border: 1px solid #444;
+        display: block;
+        height: 82vh; 
+        width: auto;
+        aspect-ratio: 16 / 9;
+        max-width: 95vw;
+      }
+
+      /* Container to hold both buttons side-by-side */
+      .nav-container {
+        display: flex;
+        gap: 12px;
+      }
+
+      /* Your sleek, minimalist button style */
+      .nav-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        background-color: #161616;
+        color: #EEEEEE;
+        border: 1px solid #EEEEEE;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .nav-btn:hover {
+        background-color: #2B2B2B;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="stage">
+      <canvas id="riveCanvas" width="1920" height="1080"></canvas>
+
+      <div class="nav-container">
+        <a href="index.html" class="nav-btn">
+          <span>←</span> 
+        </a>
+
+        <a href="billetes.html" class="nav-btn">
+          <span>→</span> 
+        </a>
+      </div>
+    </div>
+
+    <script src="april.js"></script>
+
+  </body>
+</html>

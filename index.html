@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rive Study – 3D Carrusel in Rive App -</title>
+
+    <script src="https://unpkg.com/@rive-app/webgl2@latest"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #161616;
+        overflow: hidden;
+      }
+
+      .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px; /* Tightened the gap between canvas and button */
+      }
+
+      canvas {
+        border: 1px solid #444;
+        display: block;
+        height: 82vh; /* Slightly taller canvas */
+        width: auto;
+        aspect-ratio: 16 / 9;
+        max-width: 95vw;
+      }
+
+      /* Minimalist Icon Button */
+      .next-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;      /* Decreased padding: barely contains elements */
+        background-color: #161616;
+        color: #EEEEEE;
+        border: 1px solid #EEEEEE;
+        border-radius: 4px;     /* Subtle rounded corners */
+        text-decoration: none;
+        font-size: 18px;        /* Focus on the emojis/arrow */
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .next-btn:hover {
+        background-color: #2B2B2B;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="stage">
+      <canvas id="riveCanvas" width="1920" height="1080"></canvas>
+
+      <a href="loteria.html" class="next-btn">
+        <span>→</span> 
+      </a>
+    </div>
+
+    <script src="loteria.js"></script>
+
+  </body>
+</html>
