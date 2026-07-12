@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rive Study – Billete de 500 </title>
+    <title>Rive Study – Billete de 500 -</title>
 
     <script src="https://unpkg.com/@rive-app/webgl2@latest"></script>
 
@@ -36,7 +36,13 @@
         max-width: 95vw;
       }
 
-      /* Minimalist Button Style */
+      /* Container to hold both buttons side-by-side */
+      .nav-container {
+        display: flex;
+        gap: 12px;
+      }
+
+      /* Your sleek, minimalist button style */
       .nav-btn {
         display: flex;
         align-items: center;
@@ -62,9 +68,15 @@
     <div class="stage">
       <canvas id="riveCanvas" width="1920" height="1080"></canvas>
 
-      <a href="loteria.html" class="nav-btn">
-        <span>←</span> 
-      </a>
+      <div class="nav-container">
+        <a href="loteria.html" class="nav-btn">
+          <span>←</span> 
+        </a>
+
+        <a href="Fishtank.html" class="nav-btn">
+          <span>→</span> 
+        </a>
+      </div>
     </div>
 
     <script src="billetes.js"></script>
